@@ -1,36 +1,36 @@
 package com.utad.baco;
 
-import android.support.v7.app.ActionBarActivity;
+import model.Wine;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
+import android.view.View;
+import android.widget.ImageView;
 
 
 public class MainActivity extends ActionBarActivity {
-
+    
+	private Wine vegaval = null;
+	private Wine valdelacasa = null;
+		
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        vegaval = new Wine ( R.drawable.vegaval,"Vegaval","http://mail.google.es/Vegaval", "Miguel Calatay","Tinto",5);
+        valdelacasa = new Wine ( R.drawable.valdelacasa,"Val de la Casa","http://mail.google.es/ValdelaCasa", "Angel Sanlucar","Rosado",4); 
+    }
+    
+    public void changeImage(View v){
+
+          	
+    	 	ImageView wineImage = (ImageView) findViewById(R.id.wine_image);
+    	
+    	    if (R.id.btn_vegaval==v.getId()) {
+    	    	 wineImage.setImageResource(R.drawable.vegaval);
+    	    }
+    	    else {
+            wineImage.setImageResource(R.drawable.valdelacasa);
+    	    }
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

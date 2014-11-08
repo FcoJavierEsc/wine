@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,38 +9,46 @@
     android:background="#FF0066"
     tools:context="com.utad.baco.MainActivity" >
 
-    <ImageView
-        android:id="@+id/wine_image"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_gravity="bottom|right"
-        android:contentDescription="@string/wine_description"
-        android:src="@drawable/vegaval" />
+   <ImageView
+       android:id="@+id/wine_image"
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentTop="true"
+       android:contentDescription="@string/wine_description"
+       android:src="@drawable/vegaval" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" 
-        android:background="@android:color/white">
+   <Button
+       android:id="@+id/btn_vegaval"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/btn_valdelacasa"
+       android:layout_alignRight="@+id/btn_valdelacasa"
+       android:layout_below="@+id/btn_valdelacasa"
+       android:layout_centerHorizontal="false"
+       android:onClick="changeImage"
+       android:text="@string/vegaval"
+       android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btn_vegaval"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="35dp"
-        android:onClick="changeImage"
-        android:text="@string/vegaval" />
-
-
-
-<Button
-    android:id="@+id/btn_valdelacasa"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="24dp"
-    android:onClick="changeImage"
-    android:text="@string/valdelacasa" />
-</LinearLayout>
-
-</FrameLayout>
+   <Button
+       android:id="@+id/btn_valdelacasa"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/wine_image"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="55dp"
+       android:onClick="changeImage"
+       android:text="@string/valdelacasa" />
+   
+   <View
+       android:id="@+id/cuadradito"
+       android:layout_alignParentLeft="true"
+       android:layout_width="100px"
+       android:layout_height="100px"
+       android:layout_below="@+id/btn_vegaval"
+       android:background="#0000FF"
+       android:layout_marginLeft="50px"
+       />
+   
+</RelativeLayout>

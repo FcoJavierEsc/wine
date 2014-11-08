@@ -7,5 +7,5 @@
     <string name="vegaval">Cambiar a Vegaval</string>
     <string name="valdelacasa">Seleccionar Val de la Casa</string>
     <string name="wine_description">Vegaval</string>
-
+    <string name="variety_grapes">Variedad de uva usada.</string>
 </resources>

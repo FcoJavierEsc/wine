@@ -1,9 +1,9 @@
 package com.utad.baco;
 
 import model.Wine;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
@@ -41,10 +41,13 @@ public class MainActivity extends ActionBarActivity {
         
         LinearLayout grapesContainer = (LinearLayout)findViewById(R.id.grapes);
         
+        TextView titulo = (TextView)findViewById(R.id.txt_listgrapes);
+        //titulo.setTypeface(null,Typeface.BOLD_ITALIC);
+        
         for (String grape : vegaval.getGrapes()){
-        	    TextView text= new TextView (this);
+        	TextView text= new TextView (this);
         	    text.setText(grape);
-        	    LinearLayout.LayoutParams params=new  LinearLayout.LayoutParams(
+        	    LinearLayout.LayoutParams  params=new  LinearLayout.LayoutParams(
         	    		LinearLayout.LayoutParams.MATCH_PARENT,
         	    		LinearLayout.LayoutParams.WRAP_CONTENT);
            text.setLayoutParams(params);

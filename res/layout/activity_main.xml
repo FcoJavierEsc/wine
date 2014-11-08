@@ -2,53 +2,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF0066"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#FF0066"
     tools:context="com.utad.baco.MainActivity" >
 
-   <ImageView
-       android:id="@+id/wine_image"
-       android:layout_width="100dp"
-       android:layout_height="100dp"
-       android:layout_alignParentLeft="true"
-       android:layout_alignParentRight="true"
-       android:layout_alignParentTop="true"
-       android:contentDescription="@string/wine_description"
-       android:src="@drawable/vegaval" />
+    <ImageView
+        android:id="@+id/wine_image"
+        android:layout_width="100dp"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/wine_description"
+        android:src="@drawable/vegaval" />
 
-   <Button
-       android:id="@+id/btn_vegaval"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignLeft="@+id/btn_valdelacasa"
-       android:layout_alignRight="@+id/btn_valdelacasa"
-       android:layout_below="@+id/btn_valdelacasa"
-       android:layout_centerHorizontal="false"
-       android:onClick="changeImage"
-       android:text="@string/vegaval"
-       android:textColor="#ffffff" />
+    <TextView
+        android:id="@+id/txt_winename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/wine_image"
+        android:layout_toRightOf="@+id/wine_image"
+        android:text="txt_winename" />
 
-   <Button
-       android:id="@+id/btn_valdelacasa"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_below="@+id/wine_image"
-       android:layout_centerHorizontal="true"
-       android:layout_marginTop="55dp"
-       android:onClick="changeImage"
-       android:text="@string/valdelacasa" />
-   
-   <View
-       android:id="@+id/cuadradito"
-       android:layout_alignParentLeft="true"
-       android:layout_width="100px"
-       android:layout_height="100px"
-       android:layout_below="@+id/btn_vegaval"
-       android:background="#0000FF"
-       android:layout_marginLeft="50px"
-       />
-   
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wine_image"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/wine_image" >
+
+        <TextView
+            android:id="@+id/txt_wine_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wine_Notes"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txt_winehouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_winename"
+        android:layout_alignRight="@+id/txt_winename"
+        android:layout_below="@+id/txt_winename"
+        android:layout_marginTop="12dp"
+        android:text="txt_winehouse" />
+
+    <LinearLayout
+        android:id="@+id/grapes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txt_winehouse"
+        android:layout_below="@+id/txt_winehouse"
+        android:layout_marginRight="47dp"
+        android:layout_marginTop="94dp"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_typewine"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txt_winehouse"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/wine_image"
+        android:gravity="center_vertical"
+        android:text="txt_typewine" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_typewine"
+        android:layout_below="@+id/txt_typewine"
+        android:layout_marginTop="19dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="1" />
+
 </RelativeLayout>

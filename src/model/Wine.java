@@ -1,5 +1,6 @@
 package model;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Wine {
@@ -8,22 +9,25 @@ public class Wine {
 	    private List <String> mGrapes ;
 	    private String mName;
 	    private String mURL;
-	    private String mWypeWine;
+	    private String mTypeWine;
 	    private String mWinehouse;
+	    private String mNotes;
 	    private int mRating;
 	    
 	    
 	    
 	    
 		public Wine(int image, String name, String uRL, String wypeWine,
-				String winehouse, int rating) {
+				String winehouse, int rating, String notes) {
 			super();
 			mImage = image;
 			mName = name;
 			mURL = uRL;
-			mWypeWine = wypeWine;
+			mTypeWine = wypeWine;
 			mWinehouse = winehouse;
 			mRating = rating;
+			mGrapes = new LinkedList<String>();
+			mNotes = notes;
 		}
 		
 		public void addGrape (String grape){
@@ -54,12 +58,20 @@ public class Wine {
 		public void setURL(String uRL) {
 			mURL = uRL;
 		}
-		public String getWypeWine() {
-			return mWypeWine;
+		public String getTypeWine() {
+			return mTypeWine;
 		}
-		public void setWypeWine(String wypeWine) {
-			mWypeWine = wypeWine;
+		public void setTypeWine(String typeWine) {
+			mTypeWine = typeWine;
 		}
+		public String getNotes() {
+			return mNotes;
+		}
+
+		public void setNotes(String notes) {
+			mNotes = notes;
+		}
+
 		public String getWinehouse() {
 			return mWinehouse;
 		}

@@ -7,7 +7,7 @@
     <string name="vegaval">Cambiar a Vegaval</string>
     <string name="valdelacasa">Seleccionar Val de la Casa</string>
     <string name="wine_description">Vegaval</string>
-    <string name="variety_grapes">Variedad de uva usada.</string>
+    <string name="variety_grapes">Lista uvas.</string>
     <string name="reload">recargar.</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="title_activity_wine_house">WineHouseActivity</string>

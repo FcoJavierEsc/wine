@@ -1,6 +1,5 @@
 package com.utad.baco.controller;
 
-import com.utad.baco.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

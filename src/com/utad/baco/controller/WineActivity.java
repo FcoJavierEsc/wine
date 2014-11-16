@@ -1,10 +1,8 @@
 package com.utad.baco.controller;
 
-import com.utad.baco.R;
 import com.utad.baco.model.Wine;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -56,9 +54,6 @@ public class WineActivity extends ActionBarActivity {
 
 		LinearLayout grapesContainer = (LinearLayout) findViewById(R.id.grapes);
 
-		TextView titulo = (TextView) findViewById(R.id.txt_listgrapes);
-		// titulo.setTypeface(null,Typeface.BOLD_ITALIC);
-
 		for (String grape : mWine.getGrapes()) {
 			TextView text = new TextView(this);
 			text.setText(grape);
@@ -91,7 +86,6 @@ public class WineActivity extends ActionBarActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
 		boolean def = super.onOptionsItemSelected(item);
 
 		if (item.getItemId() == R.id.action_settings) {
@@ -106,7 +100,6 @@ public class WineActivity extends ActionBarActivity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resul, Intent intent) {
-		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resul, intent);
 
 		if (requestCode == SettingsActivity.REQUEST_SELECTED_SCALETYPE

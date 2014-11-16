@@ -1,14 +1,10 @@
 package com.utad.baco.controller;
 
-import com.utad.baco.R;
-import com.utad.baco.R.layout;
 
-import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
@@ -20,7 +16,7 @@ public class WineHouseActivity extends TabActivity {
 		setContentView(R.layout.activity_wine_house);
 		
 		TabHost tabHost = getTabHost();
-		
+		Log.v ("UTAD","SOY YO");
 		Intent vegavalIntent = new Intent(this,WineActivity.class);
 		TabSpec tabVegaval = tabHost.newTabSpec("Vegaval");
 		tabVegaval.setIndicator("Vegaval");

@@ -1,9 +1,6 @@
 package com.utad.baco.controller;
 
-import com.utad.baco.R;
-import com.utad.baco.model.Wine;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -22,10 +19,8 @@ public class WebActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 
-		Wine vegaval;
 		setContentView(R.layout.activity_web);
 
 		// 1) accedo a las vistas
@@ -52,14 +47,12 @@ public class WebActivity extends ActionBarActivity {
 
 			@Override
 			public void onPageStarted(WebView view, String url, Bitmap favicon) {
-				// TODO Auto-generated method stub
 				super.onPageStarted(view, url, favicon);
 				loading.setVisibility(View.VISIBLE);
 			}
 
 			@Override
 			public void onPageFinished(WebView view, String url) {
-				// TODO Auto-generated method stub
 				super.onPageFinished(view, url);
 				// loading.setVisibility(View.INVISIBLE);
 				loading.setVisibility(View.GONE);
@@ -77,7 +70,7 @@ public class WebActivity extends ActionBarActivity {
 
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
-		// TODO Auto-generated method stub
+
 		super.onSaveInstanceState(outState);
 
 		String currentURL = mBrowser.getUrl();

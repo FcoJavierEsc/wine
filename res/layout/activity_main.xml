@@ -59,7 +59,8 @@
                 <RatingBar
                     android:id="@+id/rating"
                     style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:isIndicator="true"
                     android:numStars="5"
@@ -67,8 +68,9 @@
 
                 <Button
                     android:id="@+id/button1"
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
+                    style="?android:attr/buttonStyleSmall"                
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:onClick="showWeb"
                     android:text="Web" />
